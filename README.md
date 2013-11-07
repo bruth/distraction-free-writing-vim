@@ -1,36 +1,33 @@
-## Distraction Free Writing for Vim
+# Distraction Free Mode for Vim
 
-* Copy `plugin/DistractionFree.vim` to `~/.vim/plugin`
+## Install
 
-* Copy `syntax/mkd.vim` to `~/.vim/syntax`
+**Vundle**
 
-* Copy `ftdetect/mkd.vim` to `~/.vim/ftdetect`
+Add this line to your .vimrc file:
 
-* Copy `colors/iawriter.vim` to `~/.vim/colors`
-
-* In .vimrc, specify the colorschemes and fonts to use in fullscreen mode and normal mode.
-
-		g:fullscreen_colorscheme - colorscheme to use in fullscreen mode 
-		g:fullscreen_font font to use in fullscreen mode 
-		g:normal_colorscheme - colorscheme to use in normal mode 
-		g:normal_font - font to use in normal mode
-
-example (macvim): 
-
-```vim
-	let g:fullscreen_colorscheme = "iawriter"
-	let g:fullscreen_font = "Cousine:h14"
-	let g:normal_colorscheme = "codeschool"
-	let g:normal_font="Inconsolata:h14"
+```
+Bundle 'bruth/vim-distraction-free' 
 ```
 
-or, for gvim:
+**Pathogen**
 
-```vim
-  let g:fullscreen_colorscheme = "iawriter"
-  let g:fullscreen_font ="Cousine 12"
-  let g:normal_colorscheme= g:colors_name
-  let g:normal_font=&guifont
+```
+mkdir -p ~/.vim/bundle
+git clone git://github.com/bruth/vim-distraction-free.git ~/.vim/bundle/vim-distraction-free
 ```
 
-Under linux, you must manually activate fullscreen mode (ie ALT+F11)
+**Manually**
+
+Download and copy `plugin/DistractionFree.vim` to `~/.vim/plugin`.
+
+## Options
+
+- `g:fullscreen_colorscheme` - colorscheme to use in fullscreen mode
+- `g:fullscreen_font` - font to use in fullscreen mode 
+
+_Options default to the current settings of the session._
+
+## Usage
+
+Default binding is set to `<leader>d` to toggle between normal and distraction-free mode.
